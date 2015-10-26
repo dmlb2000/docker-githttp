@@ -6,6 +6,7 @@ run apt-get -y update && \
 run a2enmod dav_fs
 run a2enmod dav
 run mkdir -p /templates
+run touch /var/www/DAVLock && chown www-data:www-data /var/www/DAVLock
 copy runit.sh /usr/sbin/runit.sh
 copy repo-template.conf /templates/
 run chmod a+x /usr/sbin/runit.sh
